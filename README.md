@@ -1,8 +1,8 @@
 # MyDocket
 
-Debtors across the country are able to file their paperwork, but to get updates about their bankruptcy case they have to wait for mail to be sent but recently, the government contractor has made this information accessible via an API!
+After debtors across the country file their paperwork, updates about their case come from the court via physical mail. Many of our users are getting mail slowly or are moving, causing them to miss update deadlines set by the court.
 
-We need to build an interface to let our users fetch their case updates from the court, known as a docket, and show all of their dockets and highlight the ones most important.
+We need to build an online interface to let our users check their case updates from the court, known as a docket. It should show all of their dockets and highlight the ones most important. Luckily a government contractor has put together an experimental API we can start to use.
 
 ## Making Requests to the Docket Provider
 
