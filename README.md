@@ -18,7 +18,7 @@ The URL of the API will also be provided to you at the time of building the serv
 
 You can expect a response like:
 
-```json
+```
 [
   {
         "description": "INSTALLMENTS APPLICATION APPROVED",
@@ -34,14 +34,16 @@ You can expect a response like:
 
 # Setup
 
-### Setup Dependencies
+### Setup Node & NPM
 
-If you don't already have Node installed, you can install NVM (Node Version Manager) which makes maintaining node versions easy. You can do this exercise in any version, to install using nvm simply type `nvm install 10.14.0`
+If you don't already have Node installed, you can install NVM (Node Version Manager) which makes maintaining node versions easy.
 
 Installing NVM:
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
+
+Now for example you can simply install and use Node v10 by typing `nvm install 10.14.0` and `nvm use 10.14.0`
 
 ### Setup Repo Code
 
