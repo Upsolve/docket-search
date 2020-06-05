@@ -8,9 +8,9 @@ We need to build an online interface to let our users check their case updates f
 
 To request a bankruptcy case's docket, simply make a GET request to the service url like such:
 
-- `http://0.0.0.0/{case_id}`
-- `http://0.0.0.0/18-bk-12345`
-- `http://0.0.0.0/20-bk-48293`
+- `http://0.0.0.0/{district}/{case_id}`
+- `http://0.0.0.0/azb/18-bk-12345`
+- `http://0.0.0.0/nyeb/20-bk-48293`
 
 The URL of the API will also be provided to you at the time of building the service. To make requests, you will need to pass the following Authorization header:
 
@@ -21,14 +21,15 @@ You can expect a response like:
 ```
 [
   {
-        "description": "INSTALLMENTS APPLICATION APPROVED",
-        "key": "installmentsApplicationApproved",
-        "status": "INFO", // 'INFO', 'WARNING', 'CRITICAL'
-        "date": "2020-01-04T18:47:04.287186+00:00",
-        "case_id": "18-bk-12345",
-        "text": " Order Granting Application To Pay Filing Fees In Installments"
-    },
-    ...
+    "case_id": "18-bk-12345",
+    "description": "INSTALLMENTS APPLICATION APPROVED",
+    "date": "2020-01-04T18:47:04.287186+00:00",
+    "district": "azb",
+    "key": "installmentsApplicationApproved",
+    "status": "INFO", // 'INFO', 'WARNING', 'CRITICAL'
+    "text": " Order Granting Application To Pay Filing Fees In Installments"
+  },
+  ...
 ]
 ```
 
