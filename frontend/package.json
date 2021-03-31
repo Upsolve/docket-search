@@ -1,53 +1,18 @@
 {
   "name": "my_docket",
   "version": "0.0.1",
-  "description": "simple interface for bankruptcy filers to see their case docket",
+  "description": "Simple UI for bankruptcy filers to get their case docket entries.",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js"
+    "dev": "parcel ./src/index.html --out-dir ./dist",
+    "build": "rimraf dist && parcel build ./src/*.html ./src/**/*.html --out-dir ./dist",
+    "start": "npm run dev"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-decorators": "^7.4.4",
-    "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.10.1",
-    "@hot-loader/react-dom": "^16.11.0",
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.6",
-    "copy-webpack-plugin": "^4.5.1",
-    "eslint": "^5.6.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
-    "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "image-webpack-loader": "^4.6.0",
-    "redux-mock-store": "^1.5.4",
-    "resolve-url-loader": "^2.1.0",
-    "typescript": "^3.9.5",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "parcel-bundler": "^1.12.5",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "axios": "^0.18.1",
-    "history": "^4.7.2",
-    "lodash": "^4.17.15",
-    "prop-types": "^15.6.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-hot-loader": "^4.12.18",
-    "react-redux": "^7.1.3",
-    "react-svg-loader": "^2.1.0",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
-    "styled-components": "^4.0.0-beta.9",
-    "whatwg-fetch": "^2.0.3"
+    "lodash": "^4.17.15"
   }
 }

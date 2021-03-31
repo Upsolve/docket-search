@@ -1,16 +1,12 @@
 {
   "name": "my_docket_backend",
   "version": "0.0.1",
-  "description": "simple backend for interface for bankruptcy filers to see their case docket",
+  "description": "Simple backend sitting between MyDocket frontend and mock PACER API.",
   "scripts": {
-    "start:local": "babel-node ./src/start",
+    "start:local": "node ./src/start",
     "start": "nodemon -L --exec npm run start:local"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/node": "^7.8.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.8.4",
     "nodemon": "^1.18.10"
   },
   "dependencies": {}
