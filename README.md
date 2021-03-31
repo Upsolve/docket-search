@@ -1,3 +1,5 @@
+![](https://upsolve.org/images/meta-legalaid.png)
+
 # MyDocket
 
 After debtors across the country file their paperwork, updates about their case come from the court via physical mail. Many of our users are getting mail slowly or are moving, causing them to miss update deadlines set by the court.
@@ -16,12 +18,16 @@ Examples GETs:
 
 To see the possible values for district codes, look at `districtList.js`. The pattern for every case number is two digits (shorthand for years end, ex: 2021 > 21), then `-bk-` which stands for bankruptcy case, and lastly 5 random digits. Requests will also require an Authorization header: `XAiB6WLEwejuf6HaQrphxZlknSGftUP-9Ww3q5fZtLU`.
 
+Authorization Headers:
+- Normal: `XAiB6WLEwejuf6HaQrphxZlknSGftUP-9Ww3q5fZtLU`
+- Buggy: `XYvU5gYDEg5i67MjVdUv5o4wihBsKjbe3_NDYMVMinc`
+
 Making a valid request will result in the follow payload structure:
 
 ```json
 {
-  success: true,
-  docket: [
+  "success": true,
+  "docket": [
     {
       "caseNumber": "18-bk-12345",
       "date": "2020-01-04T18:47:04.287186+00:00",
@@ -38,22 +44,25 @@ After you get a handle on the UI you want to build, your application will have t
 
 # Setup
 
-### Setup Node & NPM
+## Setup Node & NPM
 
 If you don't already have Node installed, you can install NVM (Node Version Manager) which makes maintaining node versions easy.
 
-Installing NVM:
+Installing NVM (Mac/Linux):
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
+Installing NVM (Windows)
+- Repo: https://github.com/coreybutler/nvm-windows
+- Downloads: https://github.com/coreybutler/nvm-windows/releases
 
-Now for example you can simply install and use Node v14 by typing `nvm install 14.14.0` and `nvm use 14.14.0`
+Now within your projects you can simply install and change versions of Node by typing commands like `nvm install 14.14.0` and `nvm use 14.14.0`
 
-### Backend API Server
+## Backend API Server
 
 Feel free to use any backend languages/frameworks you want to run your web server and handle request/responses. We've initialized a Node backend for you, just `cd ./backend && npm start`
 
-### Frontend SPA
+## Frontend SPA
 
 We expect you to use a modern framework to build out the UI for users to request their case docket.
 
